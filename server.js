@@ -13,7 +13,10 @@ mongoose
   .catch((err) => console.log("Failed:", err.message));
 
 const authRoutes = require("./routes/authRoutes");
+const productRoutes = require("./routes/productRoutes");
+
 app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);  
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
